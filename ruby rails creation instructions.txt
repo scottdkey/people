@@ -1,0 +1,79 @@
+GUIDE TO SETTING UP A NEW RAILS APP
+
+Create a new rails app in the terminal 
+rails new file name -d postgresql
+
+Open up file in VS code 
+There will be a ton of folders in there (most of what we will use is in the app folder)
+
+Go to gemfile and add under group development: do 
+these gems can be anything - for right now use
+gem "better_errors"
+gem "binding_of_caller"
+gem "pry-rails"
+gem "prettier"
+
+bundle install 
+in terminal this will make sure all of the gems you’ve put in your gem file will be installed and linked
+
+bundle exec rails server
+in terminal: this runs a server and takes over the terminal window
+you can't write in the terminal anymore as the server is being run there
+You have to keep it running. 
+
+Create new terminal window and cd into Rails file in other open terminal 
+type in rails database: create if localhost:3000 doesn't open. 
+
+Then go to localhost:3000 in browser to open up rails html. 
+In terminal * Listening on tcp://127.0.0.1:3000. * the 127.0.0.1 = "local host" 
+
+
+rails g model Page title:string author:string body:text 
+Creates a migration file
+Creates a model 
+creates db/migrate/20200218181751_create_pages.rb
+create app/models/page.rb
+title:string is an example of your data name and data type.
+Data names can be anything.
+Data Types must be specific. Make sure your data types are correct
+
+rails db:migrate
+runs our migrations
+the way we update our database linking
+
+bundle exec rails console 
+will run a rails console (kind like irb). 
+
+page.create(title: ‘(string goes here)’, author: ‘(sting goes here)’, body: ‘(text goes here)’)” 
+In terminal will create a new page.
+PUT THE SAME DATA TYPE AS WHEN YOU CREATED YOUR DB
+
+first_name: string
+last_name: string
+age: integer
+hair_color: string
+eye_color: string
+Gender:string
+Alive:date
+(%Y-%m-%d)
+
+rails g controller pages index show new
+your controller name should be the plural form of whatever the model is AKA in our example pages
+index, show, and new:
+these are the views you are creating
+you can call these anything but rails is always expecting an index
+rails will allow you to call the show and new methods easier they might be a good idea
+g is the shorthand for generate
+Overall this command generates pages and a controller for the model 
+
+Go to your routes.rb and swap the routes there for
+	resources :pages
+  	root 'pages#index'
+
+html.erb files allow us to execute ruby code in the html file. 
+IN the index.html.erb put:
+R
+<% %> = these are called echoing tags 
+This will show every instance of the page variable.
+
+Models are singular and controllers are the plural form of whatever the model is

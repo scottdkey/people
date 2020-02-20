@@ -1,2 +1,9 @@
-<h1>Persons#index</h1>
-<p>Find me in app/views/persons/index.html.erb</p>
+<h1>All the People!</h1>
+<h2>List of people</h2>
+<h3><%= link_to 'Create a new Entry', new_person_path %></h3>
+<% @persons.each do |person| %>
+  <h3> <%= person.full_name %></h3>
+  <%= link_to 'Show Full Details', person_path(person) %>
+  <%= link_to 'Edit', edit_person_path(person) %>
+  <%= link_to 'Delete', person_path(person), method: :delete %>
+<% end %>
