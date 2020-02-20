@@ -7,4 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # For the purpose of creating data later - this is the format.
-# Person.create(first_name:"Steve", last_name:"Stevenson", age: 31, hair_color:"Blond", eye_color: "Blue", gender: "male", alive: (19880324))
+
+
+Friend.create(first_name:"Steve", last_name:"Stevenson", age: 31, hair_color:"Blond", eye_color: "Blue", gender: "male", birth: 19880324, living: true)

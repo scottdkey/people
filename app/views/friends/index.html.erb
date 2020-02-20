@@ -3,7 +3,7 @@
 <h3><%= link_to 'Create a new Entry', new_friend_path %></h3>
 <% @friends.each do |friend| %>
   <h3> <%= friend.full_name %></h3>
-  <%= link_to 'Show Full Details', friend_path(friend) %>
+  <%= link_to 'Details', friend_path(friend) %>
   <%= link_to 'Edit', edit_friend_path(friend) %>
   <%= link_to 'Delete', friend_path(friend), method: :delete %>
 <% end %>

@@ -1,4 +1,4 @@
-<%= form_for @person do |f| %>
+<%= form_for @friend do |f| %>
 <%= f.label :first_name %>
 <%= f.text_field :first_name %>
 
@@ -6,7 +6,7 @@
 <%= f.text_field :last_name %>
 
 <%= f.label "Year Born" %>
-<%= f.date_field :alive %>
+<%= f.date_field :birth %>
 
 <%= f.label :age %>
 <%= f.text_field :age %>
@@ -16,8 +16,12 @@
 <%= f.label :hair_color %>
 <%= f.text_field :hair_color %>
 
-<%= f.label :hair_color %>
-<%= f.text_field :hair_color %>
+<%= f.label :eye_color %>
+<%= f.text_field :eye_color %>
+
+<%= f.label :living %>
+<%= f.check_box :living %>
 
 <%= f.submit %>
+<%= link_to 'back', friends_path %>
 <% end %>

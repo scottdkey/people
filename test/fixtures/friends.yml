@@ -7,7 +7,8 @@ one:
   hair_color: MyString
   eye_color: MyString
   gender: MyString
-  alive: 2020-02-19
+  birth: 2020-02-19
+  living: false
 
 two:
   first_name: MyString
@@ -16,4 +17,5 @@ two:
   hair_color: MyString
   eye_color: MyString
   gender: MyString
-  alive: 2020-02-19
+  birth: 2020-02-19
+  living: false

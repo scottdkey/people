@@ -1,0 +1,21 @@
+<h1>
+  <%= @friend.full_name %></h1>
+<p>Age:
+  <%= @friend.age %></p>
+<p>Hair Color:
+  <%= @friend.hair_color %></p>
+<p>Eye Color:
+  <%= @friend.eye_color %></p>
+<p>Birth Date:
+  <%= @friend.birth %>
+</p>
+<p>
+
+  <% if @friend.living == true %>
+    <div><%=@friend.full_name%> is alive and kicking!</div>
+  <% else %>
+    <div><%=@friend.full_name%> died. Weird that you didn't know that.</div>
+  <% end %>
+</p>
+<%= link_to 'back', friends_path %>
+<%= link_to 'Edit', edit_friend_path(@friend) %>
